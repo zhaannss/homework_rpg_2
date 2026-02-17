@@ -1,5 +1,10 @@
-package com.narxoz.rpg.combat;
-
+package src.com.narxoz.rpg.combat;
+public interface Ability  {
+    String getName();
+    int getDamage();
+    String getDescription();
+    Ability clone();
+}
 /**
  * Interface for all enemy abilities in the RPG system.
  *
@@ -28,7 +33,6 @@ package com.narxoz.rpg.combat;
  * - AbilityType getType() (e.g., DAMAGE, BUFF, DEBUFF, ULTIMATE)
  * - Ability clone()   <-- Critical for Prototype pattern!
  */
-public interface Ability {
 
     // TODO: Define ability behavior methods
     // Consider:
@@ -37,4 +41,4 @@ public interface Ability {
     // - String getDescription()
     // - Ability clone()  <-- IMPORTANT for deep copying!
 
-}
+

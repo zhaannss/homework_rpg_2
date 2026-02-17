@@ -1,4 +1,4 @@
-package com.narxoz.rpg;
+package src.com.narxoz.rpg;
 
 /**
  * Main demonstration class for the RPG Enemy System.
@@ -40,6 +40,8 @@ package com.narxoz.rpg;
  */
 public class Main {
     public static void main(String[] args) {
+
+
         System.out.println("=== RPG Enemy System - Creational Patterns Capstone ===\n");
 
         // ============================================================
