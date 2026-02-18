@@ -4,6 +4,7 @@ public interface LootTable {
     List<String> getItems();
     int getGoldDrop();
     int getExperienceDrop();
+    String getLootInfo();
     LootTable clone();
 }
 /**

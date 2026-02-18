@@ -1,7 +1,7 @@
-package com.narxoz.rpg.enemy;
+package src.com.narxoz.rpg.enemy;
 
-import com.narxoz.rpg.combat.Ability;
-import com.narxoz.rpg.loot.LootTable;
+import src.com.narxoz.rpg.combat.Ability;
+import src.com.narxoz.rpg.loot.LootTable;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -61,7 +61,7 @@ import java.util.HashMap;
  * - Make the built DragonBoss IMMUTABLE (no setters!)
  * - The Builder handles all the complexity
  */
-public class DragonBoss implements Enemy {
+public class DragonBoss extends BaseEnemy {
 
     // --- Basic Stats ---
     private String name;
