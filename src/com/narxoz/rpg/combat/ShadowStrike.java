@@ -1,4 +1,4 @@
-package src.com.narxoz.rpg.combat;
+package com.narxoz.rpg.combat;
 public class ShadowStrike extends BaseAbility {
     public ShadowStrike() {
         super("Shadow Strike",

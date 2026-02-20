@@ -1,6 +1,6 @@
-package src.com.narxoz.rpg.factory;
-import src.com.narxoz.rpg.combat.*;
-import src.com.narxoz.rpg.loot.*;
+package com.narxoz.rpg.factory;
+import com.narxoz.rpg.combat.*;
+import com.narxoz.rpg.loot.*;
 import java.util.Arrays;
 import java.util.List;
 public class ShadowComponentFactory implements EnemyComponentFactory {

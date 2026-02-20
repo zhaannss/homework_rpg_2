@@ -1,4 +1,4 @@
-package src.com.narxoz.rpg.combat;
+package com.narxoz.rpg.combat;
 public class FlameBreath extends BaseAbility {
     public FlameBreath() {
         super("Flame Breath",

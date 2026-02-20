@@ -1,8 +1,8 @@
-package src.com.narxoz.rpg.builder;
-import src.com.narxoz.rpg.enemy.Enemy;
-import src.com.narxoz.rpg.enemy.SimpleEnemy;
-import src.com.narxoz.rpg.combat.Ability;
-import src.com.narxoz.rpg.loot.LootTable;
+package com.narxoz.rpg.builder;
+import com.narxoz.rpg.enemy.Enemy;
+import com.narxoz.rpg.enemy.SimpleEnemy;
+import com.narxoz.rpg.combat.Ability;
+import com.narxoz.rpg.loot.LootTable;
 import java.util.ArrayList;
 import java.util.List;
 public class SimpleEnemyBuilder implements EnemyBuilder {
@@ -78,6 +78,7 @@ public class SimpleEnemyBuilder implements EnemyBuilder {
         // У обычных врагов фаз нет
         return this;
     }
+    // FACTORY METHOD: build() creates the product.
     @Override
     public Enemy build() {
         if (this.name == null || this.name.trim().isEmpty()) {

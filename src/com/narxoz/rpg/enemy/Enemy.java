@@ -1,22 +1,19 @@
-package src.com.narxoz.rpg.enemy;
-import src.com.narxoz.rpg.combat.Ability;
-import src.com.narxoz.rpg.loot.LootTable;
+package com.narxoz.rpg.enemy;
+import com.narxoz.rpg.combat.Ability;
 import java.util.List;
-public interface Enemy{
+public interface Enemy {
         String getName();
         int getHealth();
-        int getDamage();
-        int getDefense();
-        int getSpeed();
-
         List<Ability> getAbilities();
-        LootTable getLootTable();
+
+        void setName(String name);
+        void setHealth(int health);
+        void addAbility(Ability ability);
+        void multiplyStats(double multiplier);
 
         void displayInfo();
-
-        // Prototype
         Enemy clone();
-
+}
     // TODO: Define core stat methods
     // - String getName()
     // - int getHealth()
@@ -43,7 +40,7 @@ public interface Enemy{
     // Test your clone: modify the clone's abilities.
     // Does the original change? If yes → your copy is too shallow!
 
-}
+
 
 /**
  * Base interface for all enemies in the RPG system.

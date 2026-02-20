@@ -1,0 +1,21 @@
+package com.narxoz.rpg.prototype;
+importcom.narxoz.rpg.enemy.Enemy;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+public class EnemyRegistry {
+    private final Map<String, Enemy> templates = new HashMap<>();
+    public void registerTemplate(String key, Enemy template) {
+        templates.put(key, template);
+    }
+    public Enemy createFromTemplate(String key) {
+        Enemy template = templates.get(key);
+        if (template == null) {
+            throw new IllegalArgumentException("Template not found: " + key);
+        }
+        return template.clone();
+    }
+    public Set<String> listTemplates() {
+        return templates.keySet();
+    }
+}

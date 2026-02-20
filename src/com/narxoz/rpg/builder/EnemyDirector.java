@@ -1,7 +1,8 @@
-package src.com.narxoz.rpg.builder;
-import src.com.narxoz.rpg.enemy.Enemy;
-import src.com.narxoz.rpg.factory.EnemyComponentFactory;
+package com.narxoz.rpg.builder;
+import com.narxoz.rpg.enemy.Enemy;
+import com.narxoz.rpg.factory.EnemyComponentFactory;
 public class EnemyDirector {
+    // The Director uses Factory Method delegation by calling builder.build().
     public Enemy createMinion(EnemyBuilder builder, EnemyComponentFactory factory) {
         return builder
                 .setName("Themed Minion")

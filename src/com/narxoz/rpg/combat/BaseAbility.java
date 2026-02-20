@@ -1,4 +1,4 @@
-package src.com.narxoz.rpg.combat;
+package com.narxoz.rpg.combat;
 public abstract class BaseAbility implements Ability {
     protected String name;
     protected int damage;

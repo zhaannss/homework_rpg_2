@@ -1,4 +1,4 @@
-package src.com.narxoz.rpg.loot;
+package com.narxoz.rpg.loot;
 import java.util.Arrays;
 public class ShadowLootTable extends BaseLootTable {
     public ShadowLootTable() {

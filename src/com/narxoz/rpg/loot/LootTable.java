@@ -1,4 +1,4 @@
-package src.com.narxoz.rpg.loot;
+package com.narxoz.rpg.loot;
 import java.util.List;
 public interface LootTable {
     List<String> getItems();

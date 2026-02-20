@@ -1,6 +1,6 @@
-package src.com.narxoz.rpg.builder;
-import src.com.narxoz.rpg.enemy.BossEnemy;
-import src.com.narxoz.rpg.enemy.Enemy;
+package com.narxoz.rpg.builder;
+import com.narxoz.rpg.enemy.BossEnemy;
+import com.narxoz.rpg.enemy.Enemy;
 import java.util.HashMap;
 import java.util.Map;
 public class BossEnemyBuilder extends SimpleEnemyBuilder {
@@ -10,6 +10,7 @@ public class BossEnemyBuilder extends SimpleEnemyBuilder {
         this.phases.put(phaseNumber, healthThreshold);
         return this;
     }
+    // FACTORY METHOD: build() creates the product.
     @Override
     public Enemy build() {
         if (this.name == null || this.name.trim().isEmpty()) {

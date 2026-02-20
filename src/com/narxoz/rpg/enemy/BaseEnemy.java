@@ -1,33 +1,43 @@
-package src.com.narxoz.rpg.enemy;
-import  src.com.narxoz.rpg.combat.Ability;
-import  src.com.narxoz.rpg.loot.LootTable;
+package com.narxoz.rpg.enemy;
+import  com.narxoz.rpg.combat.Ability;
+import  com.narxoz.rpg.loot.LootTable;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 public abstract class BaseEnemy implements Enemy {
-    protected final String name;
-    protected final int health;
-    protected final int damage;
-    protected final int defense;
-    protected final int speed;
-    protected final List<Ability> abilities;
-    protected final LootTable lootTable;
-    protected BaseEnemy(String name,
-                            int health,
-                            int damage,
-                            int defense,
-                            int speed,
-                            List<Ability> abilities,
-                            LootTable lootTable) {
-
+    protected String name;
+    protected int health;
+    protected int damage;
+    protected int defense;
+    protected int speed;
+    protected List<Ability> abilities;
+    protected LootTable lootTable;
+    protected BaseEnemy(String name, int health, int damage, int defense, int speed,
+                        List<Ability> abilities, LootTable lootTable) {
         this.name = name;
         this.health = health;
         this.damage = damage;
         this.defense = defense;
         this.speed = speed;
-
-        this.abilities = Collections.unmodifiableList(new ArrayList<>(abilities));
+        this.abilities = new ArrayList<>(abilities);
         this.lootTable = lootTable;
+    }
+
+    @Override
+    public void setName(String name) { this.name = name; }
+
+    @Override
+    public void setHealth(int health) { this.health = health; }
+
+    @Override
+    public void addAbility(Ability ability) {
+        this.abilities.add(ability); // Важно для теста Deep Copy
+    }
+
+    @Override
+    public void multiplyStats(double multiplier) {
+        this.health = (int) (this.health * multiplier);
+        this.damage = (int) (this.damage * multiplier);
+        this.defense = (int) (this.defense * multiplier);
     }
 
     public String getName() { return name; }
@@ -64,9 +74,7 @@ public abstract class BaseEnemy implements Enemy {
         for (Ability ability : abilities) {
             clonedAbilities.add(ability.clone());
         }
-
         LootTable clonedLoot = lootTable.clone();
-
         return createClone(
                 name,
                 health,

@@ -1,4 +1,4 @@
-package src.com.narxoz.rpg.combat;
+package com.narxoz.rpg.combat;
 public class Vanish extends BaseAbility {
     public Vanish() {
         super("Vanish",

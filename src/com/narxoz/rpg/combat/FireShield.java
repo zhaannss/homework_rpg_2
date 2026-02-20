@@ -1,4 +1,4 @@
-package src.com.narxoz.rpg.combat;
+package com.narxoz.rpg.combat;
 public class FireShield extends BaseAbility {
     public FireShield() {
         super("Fire Shield",
