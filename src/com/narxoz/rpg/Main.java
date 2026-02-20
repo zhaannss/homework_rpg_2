@@ -1,6 +1,6 @@
 package com.narxoz.rpg;
 import com.narxoz.rpg.builder.*;
-import com.narxoz.rpg.enemy.*;
+import com.narxoz.rpg.enemy.Enemy;
 import com.narxoz.rpg.factory.*;
 import com.narxoz.rpg.prototype.EnemyRegistry;
 import com.narxoz.rpg.combat.*;

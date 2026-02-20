@@ -1,5 +1,5 @@
 package com.narxoz.rpg.prototype;
-importcom.narxoz.rpg.enemy.Enemy;
+import com.narxoz.rpg.enemy.Enemy;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
